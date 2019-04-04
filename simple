@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+  	<title>Php</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+
+<form method="post">
+    Name:  <input type="text" name="name" /><br />
+    PH: <input type="number" name="ph" placeholder="" id="ph" class="text" step="1" min="0" max="14"><span class="note"></span> <br />
+    <input type="submit" name="submit" value="GO" />
+</form>
+<?php
+echo $_POST['name'];
+echo "<br>";
+echo $_GET['ph'];
+if ($_GET["ph"] < "7") {
+    echo "Acidic";
+} elseif ($_GET["ph"] > "7") {
+    echo "Alkaline";
+} else {
+    echo "Neutral";
+}
+
+?>
+
+</body>
+</html>
